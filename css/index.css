@@ -1,0 +1,100 @@
+*{
+	box-sizing: border-box; margin: 0; padding: 0; 
+}
+#clock{
+	text-align: center; color: #fff;	
+}
+.menu{
+	background-color: #fff; width: 100%;
+}
+ul.menu{
+	list-style: none; position: relative; 
+}
+li.menu{
+	float: left; width: 10%; text-align: center; height: 50px; background-color: #f9f8f6;
+	display: inline-block; 
+}
+li.first:hover{
+	background-color: #a55500; 
+}
+li.second:hover{
+	background-color: #b7e2f0;
+}
+li.third:hover{
+	background-color: #c30000; 
+}
+li.fourth:hover{
+	background-color: #941494;
+}
+li.fifth:hover{
+	background-color: #d77d28; 
+}
+li.sixth:hover{
+	background-color: #837e7c;
+}
+li.seventh:hover{
+	background-color: #ffb914; 
+}
+li.eigth:hover{
+	background-color: #007600;
+}
+li.ninth:hover{
+	background-color: #1589ff; 
+}
+li.tenth:hover{
+	background-color: green;
+}
+div.news{
+	width: 50%; height: 500px; float: left; background-image: url("../assets/news.jpg"); background-size: cover; filter: grayscale(90%);
+}
+h2.news{
+	text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 35px;
+}
+ul.news{
+	list-style: none; text-align: center; font-size: 10px; list-style: none;
+}
+div.quote{
+	width:100%; background-color: #000;
+}
+h2.quote{
+	text-align: center; color: #fff; padding-top: 10px; padding-bottom: 10px;
+}
+#link1, #link2, #link3, #link4{
+	width: 25%; float: left; padding-left: 40px; padding-right: 40px; padding-top: 20px; padding-bottom: 20px;  
+}
+h3.links{
+	padding-bottom: 10px; color: #3cbc3c; font-weight: bold;
+}
+li.links{
+	list-style: none; line-height: 20px; 
+}
+li.social{
+	list-style: none; line-height: 20px; 
+}
+.social{
+	background-image: url("../assets/sprite.png"); width: 35px; height: 35px; 
+}
+#facebook{
+	background-position: -15px -14px; 
+}
+#instagram{
+	background-position: -341px -14px; 
+}
+#twitter{
+	background-position: -69px -14px; 
+}
+#googleplus{
+	background-position: -178px -14px; 
+}
+#youtube{
+	background-position: -451px -14px; 
+}
+a.links{ 
+	text-decoration: none; color: #505050; font-size: 15px; 
+}
+div.rights{
+	width: 100%; background-color: #000;
+}
+p.rights{
+	text-align: center; color: #fff; padding-top: 10px; padding-bottom: 10px;  
+}
