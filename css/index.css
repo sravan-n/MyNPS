@@ -66,28 +66,26 @@ h3.links{
 	padding-bottom: 10px; color: #3cbc3c; font-weight: bold;
 }
 li.links{
-	list-style: none; line-height: 20px; 
+	list-style: none; line-height: 30px; 
 }
 li.social{
-	list-style: none; line-height: 20px; 
+	list-style: none; line-height: 30px; 
 }
 .social{
-	background-image: url("../assets/sprite.png"); width: 35px; height: 35px; 
+	background-image: url("../assets/sprite.png"); width: 40px; height: 40px; border: 1px solid #fff;
+	border-radius: 25px; 
 }
 #facebook{
-	background-position: -15px -14px; 
+	background-position: -12px -10px; 
 }
 #instagram{
-	background-position: -341px -14px; 
+	background-position: -340px -11px; 
 }
 #twitter{
-	background-position: -69px -14px; 
-}
-#googleplus{
-	background-position: -178px -14px; 
+	background-position: -67px -10px; 
 }
 #youtube{
-	background-position: -451px -14px; 
+	background-position: -450px -11px; 
 }
 a.links{ 
 	text-decoration: none; color: #505050; font-size: 15px; 
@@ -97,4 +95,8 @@ div.rights{
 }
 p.rights{
 	text-align: center; color: #fff; padding-top: 10px; padding-bottom: 10px;  
+}
+
+.links {
+	margin-right: 0px;
 }
