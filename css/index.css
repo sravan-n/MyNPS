@@ -12,7 +12,6 @@ ul.menu{
 }
 li.menu{
 	float: left; width: 10%; text-align: center; height: 50px; background-color: #f9f8f6;
-	display: inline-block; 
 }
 li.first:hover{
 	background-color: #a55500; 
@@ -45,7 +44,8 @@ li.tenth:hover{
 	background-color: green;
 }
 div.news{
-	width: 50%; height: 500px; float: left; background-image: url("../assets/news.jpg"); background-size: cover; filter: grayscale(90%);
+	width: 50%; height: 500px; float: left; background-image: url("../assets/news.jpg"); 
+	background-size: cover; filter: grayscale(90%);
 }
 h2.news{
 	text-align: center; padding-top: 10px; padding-bottom: 10px; font-size: 35px;
@@ -59,10 +59,14 @@ div.quote{
 h2.quote{
 	text-align: center; color: #fff; padding-top: 10px; padding-bottom: 10px;
 }
-#link1, #link2, #link3, #link4{
-	width: 25%; float: left; padding-left: 40px; padding-right: 40px; padding-top: 20px; padding-bottom: 20px;  
+div.find{
+	width: 100%; background-color: #f0f8ff; 
 }
-h3.links{
+#link1, #link2, #link3, #link4{
+	width: 25%; float: left; padding-left: 40px; padding-right: 40px; padding-top: 20px; 
+	padding-bottom: 20px;  
+}
+h4.links{
 	padding-bottom: 10px; color: #3cbc3c; font-weight: bold;
 }
 li.links{
@@ -72,8 +76,8 @@ li.social{
 	list-style: none; line-height: 30px; 
 }
 .social{
-	background-image: url("../assets/sprite.png"); width: 40px; height: 40px; border: 1px solid #fff;
-	border-radius: 25px; 
+	background-image: url("../assets/sprite.png"); width: 40px; height: 40px; 
+	border: 1px solid #fff; border-radius: 25px; 
 }
 #facebook{
 	background-position: -12px -10px; 
