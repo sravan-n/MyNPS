@@ -3,6 +3,7 @@
 <head>
 	<title>MyNPS</title>
 	<link rel="stylesheet" href="css/index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src="js/index.js"> </script>
 </head>
 <body>
@@ -60,82 +61,23 @@
 	<h2 class="quote">OUR PARKS OUR NATION</h2>
 </div>
 
-<div class="find" style="text-align:center;">
+<div ng-app="myApp" ng-controller="myCtrl" class="find" style="text-align:center;">
 	<h3 class="find">Find A Park By State</h3>
-	<select name="" id="" style="width: 200px; height: 20px; ">
-		<option value="">Select State</option>
-		<option value="">Alabama</option>
-		<option value="">Arijona</option>
-		<option value="">Arkansas</option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
-		<option value=""></option>
+	<select style="width: 200px; height: 20px; ">
+		<option ng-repeat=" x in states"> {{ x }} </option>
 	</select>
-
 </div>
 
 <footer>
 	<div class="links" style="width: 100%">
-		<div id="link1">
+		
+		<div ng-app="myApp2" ng-controller="myCtrl2" id="link1">
 			<h4 class="links">National Parks</h4>
 			<ul class="links">
-				<li class="links"> <a class="links" href="#">North Atlantic Region</a> </li>
-				<li class="links"> <a class="links" href="#">Mid Atlantic Region</a> </li>
-				<li class="links"> <a class="links" href="#">National Capital Region</a> </li>
-				<li class="links"> <a class="links" href="#">Southeast Region</a> </li>
-				<li class="links"> <a class="links" href="#">Midwest Region</a> </li>
-				<li class="links"> <a class="links" href="#">Southwest Region</a> </li>
-				<li class="links"> <a class="links" href="#">Rocky Moutain Region</a> </li>
-				<li class="links"> <a class="links" href="#">Western Region</a> </li>
-				<li class="links"> <a class="links" href="#">Pacific Northwest and Alaska Region</a> </li>
+				<li ng-repeat="x1 in regions"> {{ x1 + " Region"}} </li>
 			</ul>
 		</div>
+		
 		<div id="link2">
 			<h4 class="links">Other Services</h4>
 			<ul class="links">
@@ -148,6 +90,7 @@
 				<li class="links"> <a class="links" href="#">Scenecs and Recreationals</a> </li>
 			</ul>
 		</div>
+		
 		<div id="link3">
 			<h4 class="links">Reservations</h4>
 			<ul class="links">
@@ -158,6 +101,7 @@
 				<li class="links"> <a class="links" href="#">Event Reservations</a> </li>
 			</ul>
 		</div>
+		
 		<div id="link3">
 			<h4 class="links">Follow NPS</h4>
 			<ul class="links">
@@ -171,6 +115,7 @@
 				<a style="float: left; text-align: center; padding: 5px;" href="https://www.youtube.com/nationalparkservice">Youtube</a><br style="clear: both;"> <br>
 			</ul>
 		</div>
+		
 		<div style="clear: both;"></div>
 	</div>
 
