@@ -3,10 +3,12 @@
 <head>
 	<title>MyNPS</title>
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src="js/index.js"> </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="container-fluid">
 
 <header style="width: 100%; height: 60px; background: linear-gradient(#bf0a30,#002868);">
 	<div style="width: 10%; height: 60px; float: left;">
@@ -25,20 +27,24 @@
 	<div style="clear: both;"></div> 
 </header>
 
-<nav class="menu">
-	<ul class="menu">
-		<li class="first menu">North Atlantic</li>
-		<li class="second menu">Mid Atlantic</li>
-		<li class="third menu">National Capital</li>
-		<li class="fourth menu">Southeast</li>
-		<li class="fifth menu">Midwest</li>
-		<li class="sixth menu">Southwest</li>
-		<li class="seventh menu">Rocky Mountain</li>
-		<li class="eigth menu">Western</li>
-		<li class="ninth menu">Pacific NW and Alaska</li>
-		<li class="tenth menu">About</li>
-	</ul> 
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li><a href="#">North Atlantic</a></li>
+			<li><a href="#">Mid Atlantic</a></li>
+			<li><a href="#">National Capital</a></li>
+			<li><a href="#">Southeast</a></li>
+			<li><a href="#">Midwest</a></li>
+			<li><a href="#">Southwest</a></li>
+			<li><a href="#">Rocky Mountain</a></li>
+			<li><a href="#">Western</a></li>
+			<li><a href="#">Pacific NW and Alaska</a></li>
+			<li><a href="#">About</a></li>
+			</ul> 
+		</ul>
+	</div>
 </nav>
+
 
 <div id="updatesDiv" style="width: 100%; height: 550px;">
 	<div class="up" style="width: 50%; height: 500px; float: left;">
@@ -63,25 +69,25 @@
 
 <div ng-app="myApp" ng-controller="myCtrl" class="find" style="text-align:center;">
 	<h3 class="find">Find A Park By State</h3>
-	<select style="width: 200px; height: 20px; ">
-		<option ng-repeat=" x in states"> {{ x }} </option>
+	<select>
+		<option> </option>
 	</select>
 </div>
 
 <footer>
 	<div class="links" style="width: 100%">
 		
-		<div ng-app="myApp2" ng-controller="myCtrl2" id="link1">
+		<div id="link1">
 			<h4 class="links">National Parks</h4>
 			<ul class="links">
-				<li ng-repeat="x1 in regions"> {{ x1 + " Region"}} </li>
+				<li> region+" Region" (under dev) </li>
 			</ul>
 		</div>
 		
 		<div id="link2">
 			<h4 class="links">Other Services</h4>
 			<ul class="links">
-				<li class="links"> <a class="links" href="#">National Historical Sites</a> </li>
+				<li class="links" ng-repeat=""> <a class="links" href="#">National Historical Sites</a> </li>
 				<li class="links"> <a class="links" href="#">National Monuments</a> </li>
 				<li class="links"> <a class="links" href="#">National Historical Sites</a> </li>
 				<li class="links"> <a class="links" href="#">State Parks</a> </li>
