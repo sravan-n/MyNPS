@@ -1,47 +1,6 @@
-*{
-	box-sizing: border-box; margin: 0; padding: 0; 
-}
+
 #clock{
 	text-align: center; color: #fff;	
-}
-.menu{
-	background-color: #fff; width: 100%;
-}
-ul.menu{
-	list-style: none; position: relative; 
-}
-li.menu{
-	float: left; width: 10%; text-align: center; height: 50px; background-color: #f9f8f6;
-}
-li.first:hover{
-	background-color: #a55500; 
-}
-li.second:hover{
-	background-color: #b7e2f0;
-}
-li.third:hover{
-	background-color: #c30000; 
-}
-li.fourth:hover{
-	background-color: #941494;
-}
-li.fifth:hover{
-	background-color: #d77d28; 
-}
-li.sixth:hover{
-	background-color: #837e7c;
-}
-li.seventh:hover{
-	background-color: #ffb914; 
-}
-li.eigth:hover{
-	background-color: #007600;
-}
-li.ninth:hover{
-	background-color: #1589ff; 
-}
-li.tenth:hover{
-	background-color: green;
 }
 div.news{
 	width: 50%; height: 500px; float: left; background-image: url("../assets/news.jpg"); 
