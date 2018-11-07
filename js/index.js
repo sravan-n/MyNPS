@@ -14,15 +14,10 @@ setInterval(function(){
 	document.getElementById('clock').innerHTML = time;
 }, 1000)
 
-var app = angular.module("myApp", []);
-app.controller("myCtrl", function($scope, $http){
-	$http.get("/data/states.json").then(function(response){
-		$scope.states = response.data; 
+var app = angular.module("myApp",[]);
+app.controller("myCtrl", function($http, $scope){
+	$http.get("data/sample.json") 
+	.then(function(response){
+		$scope.stName = response.data.states.name;
 	});
-});
-
-var app2 = angular.module("myApp2", []);
-app2.controller("myCtrl2", function($scope) {
-	$scope.regions = [ "NorthAtlantic", "Mid Atlantic", "National Capital", "Southeast", 
-	"Midwest", "Southwest", "Rocky Mountain", "Western", "Pacific NW and Alaska"];
 });
