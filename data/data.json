@@ -1,0 +1,16 @@
+{"states":[
+    {"st_name":"xxxx", "code":"xx"},
+    {"st_name":"xxxx", "code":"xx"},
+    {"st_name":"xxxx", "code":"xx"}
+],
+"regeions": [
+    {"rg_name":"zzzzz", "color":"xx"},
+    {"rg_name":"zzzzz", "color":"xx"},
+    {"rg_name":"zzzzz", "color":"xx"}
+],
+"services":[
+    {"serv_name":"ssss", "url":"xxx.com"},
+    {"serv_name":"ssss", "url":"xxx.com"},
+    {"serv_name":"ssss", "url":"xxx.com"}
+
+]}
