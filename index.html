@@ -1,132 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>MyNPS</title>
 	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-	<script src="js/index.js"> </script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/index.js" defer></script>
 </head>
-<body class="container-fluid">
+<body>
+	<header class="site-header">
+		<a class="brand" href="#" aria-label="MyNPS home">
+			<img src="assets/npslogo.png" alt="National Park Service logo">
+			<span>National Park Service</span>
+		</a>
 
-<header style="width: 100%; height: 60px; background: linear-gradient(#bf0a30,#002868);">
-	<div style="width: 10%; height: 60px; float: left;">
-		<img style="height: 60px;" src="assets/npslogo.png" alt="logo">
-	</div>
-	<div style="width: 80%; height: 60px; float: left;">
-		<h1 style="color: #fff; text-align: center; justify-content: center; vertical-align: middle;">National Park Service</h1>
-	</div>
-	<div style="width: 10%; height: 60px; float: right;">
-		<div style="height: 50%;"> 
-		<button style="border-radius: 50%; padding: 5px; align-items: center;">Login</button>
-		<button style="border-radius: 50%; padding: 5px; align-items: center;">Signup</button> </div>
-		<div style="height: 50%;">
-		<p id="clock"></p> </div>
-	</div>
-	<div style="clear: both;"></div> 
-</header>
-
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<ul class="nav navbar-nav">
-			<li><a href="#">North Atlantic</a></li>
-			<li><a href="#">Mid Atlantic</a></li>
-			<li><a href="#">National Capital</a></li>
-			<li><a href="#">Southeast</a></li>
-			<li><a href="#">Midwest</a></li>
-			<li><a href="#">Southwest</a></li>
-			<li><a href="#">Rocky Mountain</a></li>
-			<li><a href="#">Western</a></li>
-			<li><a href="#">Pacific NW and Alaska</a></li>
-			<li><a href="#">About</a></li>
-			</ul> 
-		</ul>
-	</div>
-</nav>
-
-
-<div id="updatesDiv" style="width: 100%; height: 550px;">
-	<div class="up" style="width: 50%; height: 500px; float: left;">
-		<img src="assets/img2.jpg" alt="NPS Image" style="height: 500px; width: 100%; ">
-	</div>
-	<div class="news">
-		<h2 class="news"> Todays Updates</h2>
-		<ul class="news">
-			<li class="news">Utah Temp is very hot. Please bring water</li>
-			<li class="news">Zion is very busy, please plan accordingly</li>
-			<li class="news">Campsites for booking available only before 15 days</li>
-			<li class="news">Heavy fire danger at Yosemite</li>
-			<li class="news">Rockies now open</li>
-		</ul>
-	</div>
-	<div style="clear: both;"> </div>
-</div>
-
-<div class="quote">
-	<h2 class="quote">OUR PARKS OUR NATION</h2>
-</div>
-
-<div ng-app="myApp" ng-controller="myCtrl" class="find" style="text-align:center;">
-	<h3 class="find">Find A Park By State</h3>
-	<select>
-		<option> </option>
-	</select>
-</div>
-
-<footer>
-	<div class="links" style="width: 100%">
-		
-		<div id="link1">
-			<h4 class="links">National Parks</h4>
-			<ul class="links">
-				<li> region+" Region" (under dev) </li>
-			</ul>
+		<div class="header-actions">
+			<a class="header-button" href="login.html">Login</a>
+			<a class="header-button" href="#">Signup</a>
+			<p id="clock" aria-live="polite"></p>
 		</div>
-		
-		<div id="link2">
-			<h4 class="links">Other Services</h4>
-			<ul class="links">
-				<li class="links" ng-repeat=""> <a class="links" href="#">National Historical Sites</a> </li>
-				<li class="links"> <a class="links" href="#">National Monuments</a> </li>
-				<li class="links"> <a class="links" href="#">National Historical Sites</a> </li>
-				<li class="links"> <a class="links" href="#">State Parks</a> </li>
-				<li class="links"> <a class="links" href="#">National Memorials</a> </li>
-				<li class="links"> <a class="links" href="#">National Trails</a> </li>
-				<li class="links"> <a class="links" href="#">Scenecs and Recreationals</a> </li>
-			</ul>
-		</div>
-		
-		<div id="link3">
-			<h4 class="links">Reservations</h4>
-			<ul class="links">
-				<li class="links"> <a class="links" href="https://www.recreation.gov/" target="_blank">Recreation.Gov</a> </li>
-				<li class="links"> <a class="links" href="#">Camp Sites</a> </li>
-				<li class="links"> <a class="links" href="#">Cabins</a> </li>
-				<li class="links"> <a class="links" href="#">State Parks</a> </li>
-				<li class="links"> <a class="links" href="#">Event Reservations</a> </li>
-			</ul>
-		</div>
-		
-		<div id="link3">
-			<h4 class="links">Follow NPS</h4>
-			<ul class="links">
-				<li style="float: left;" class="social" id="facebook"></li>
-				<a style="float: left; text-align: center; padding: 5px;" href="https://www.facebook.com/nationalparkservice">Facebook</a> <br style="clear: both;"> <br>
-				<li style="float: left;" class="social" id="instagram"> </li> 
-				<a style="float: left; text-align: center; padding: 5px;" href="https://www.instagram.com/nationalparkservice/">Instagram</a><br style="clear: both;"> <br>
-				<li style="float: left; " class="social" id="twitter"></li>
-				<a style="float: left; text-align: center; padding: 5px;" href="https://twitter.com/NatlParkService">Twitter</a><br style="clear: both;"> <br>
-				<li style="float: left;" class="social" id="youtube"></li>
-				<a style="float: left; text-align: center; padding: 5px;" href="https://www.youtube.com/nationalparkservice">Youtube</a><br style="clear: both;"> <br>
-			</ul>
-		</div>
-		
-		<div style="clear: both;"></div>
-	</div>
+	</header>
 
-	<div class="rights">
-		<p class="rights">All Rights Reserved to Sravan Kumar. This is not an official page for NPS.</p>
-	</div>
-</footer>
+	<nav class="site-nav" aria-label="Park regions">
+		<a href="#">North Atlantic</a>
+		<a href="#">Mid Atlantic</a>
+		<a href="#">National Capital</a>
+		<a href="#">Southeast</a>
+		<a href="#">Midwest</a>
+		<a href="#">Southwest</a>
+		<a href="#">Rocky Mountain</a>
+		<a href="#">Western</a>
+		<a href="#">Pacific NW and Alaska</a>
+		<a href="#">About</a>
+	</nav>
+
+	<main>
+		<section class="updates" aria-labelledby="updates-heading">
+			<div class="feature-image">
+				<img src="assets/img2.jpg" alt="Mountain view in a national park">
+			</div>
+
+			<div class="news-panel">
+				<h1 id="updates-heading">Today's Updates</h1>
+				<ul>
+					<li>Utah temperatures are very hot. Please bring water.</li>
+					<li>Zion is very busy, please plan accordingly.</li>
+					<li>Campsites can be booked only 15 days in advance.</li>
+					<li>Heavy fire danger at Yosemite.</li>
+					<li>Rockies now open.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="quote" aria-label="Site motto">
+			<h2>Our Parks Our Nation</h2>
+		</section>
+
+		<section class="find">
+			<label for="state-select">Find A Park By State</label>
+			<select id="state-select">
+				<option value="">Choose a state</option>
+			</select>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer-links">
+			<section>
+				<h3>National Parks</h3>
+				<ul>
+					<li><a href="#">Regions under development</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Other Services</h3>
+				<ul>
+					<li><a href="#">National Historical Sites</a></li>
+					<li><a href="#">National Monuments</a></li>
+					<li><a href="#">State Parks</a></li>
+					<li><a href="#">National Memorials</a></li>
+					<li><a href="#">National Trails</a></li>
+					<li><a href="#">Scenic and Recreational Areas</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Reservations</h3>
+				<ul>
+					<li><a href="https://www.recreation.gov/" target="_blank" rel="noreferrer">Recreation.gov</a></li>
+					<li><a href="#">Camp Sites</a></li>
+					<li><a href="#">Cabins</a></li>
+					<li><a href="#">State Parks</a></li>
+					<li><a href="#">Event Reservations</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Follow NPS</h3>
+				<ul class="social-list">
+					<li><a href="https://www.facebook.com/nationalparkservice"><span class="social" id="facebook"></span>Facebook</a></li>
+					<li><a href="https://www.instagram.com/nationalparkservice/"><span class="social" id="instagram"></span>Instagram</a></li>
+					<li><a href="https://twitter.com/NatlParkService"><span class="social" id="twitter"></span>Twitter</a></li>
+					<li><a href="https://www.youtube.com/nationalparkservice"><span class="social" id="youtube"></span>Youtube</a></li>
+				</ul>
+			</section>
+		</div>
+
+		<div class="rights">
+			<p>All Rights Reserved to Sravan Kumar. This is not an official page for NPS.</p>
+		</div>
+	</footer>
+</body>
 </html>

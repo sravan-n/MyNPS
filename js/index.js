@@ -1,23 +1,46 @@
- function addingZero(x){
-	if (x<10) {
-		return '0'+x;
-	}
-	else{
-		return x;
+function addZero(value) {
+	return value < 10 ? "0" + value : value;
+}
+
+function updateClock() {
+	var clock = document.getElementById("clock");
+	var date = new Date();
+	var time = addZero(date.getHours()) + ":" + addZero(date.getMinutes()) + ":" + addZero(date.getSeconds());
+
+	if (clock) {
+		clock.textContent = time;
 	}
 }
 
-setInterval(function(){
-	var date = new Date;
-	var time = addingZero(date.getHours())+":"+addingZero(date.getMinutes())+":"+
-	addingZero(date.getSeconds());
-	document.getElementById('clock').innerHTML = time;
-}, 1000)
+function loadStates() {
+	var select = document.getElementById("state-select");
 
-var app = angular.module("myApp",[]);
-app.controller("myCtrl", function($http, $scope){
-	$http.get("data/sample.json") 
-	.then(function(response){
-		$scope.stName = response.data.states.name;
-	});
-});
+	if (!select) {
+		return;
+	}
+
+	fetch("data/data.json")
+		.then(function(response) {
+			if (!response.ok) {
+				throw new Error("Unable to load state data");
+			}
+			return response.json();
+		})
+		.then(function(data) {
+			var states = data.states || [];
+
+			states.forEach(function(state) {
+				var option = document.createElement("option");
+				option.value = state.code;
+				option.textContent = state.st_name;
+				select.appendChild(option);
+			});
+		})
+		.catch(function() {
+			select.disabled = true;
+		});
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+loadStates();
